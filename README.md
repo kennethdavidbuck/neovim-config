@@ -4,7 +4,8 @@ My [LazyVim](https://github.com/LazyVim/LazyVim) configuration.
 
 ## Customizations
 
-- Enable language extras for Go, Markdown, TypeScript, YAML, Helm, Git files, and JSON in [`lua/config/lazy.lua`](lua/config/lazy.lua).
+- Enable language extras for Go, Markdown, TypeScript, YAML, Helm, Docker, Terraform, Git files, and JSON in [`lua/config/lazy.lua`](lua/config/lazy.lua).
+- Add Bash language server support in [`lua/plugins/bash.lua`](lua/plugins/bash.lua).
 - Enable `mini.animate` for scrolling, cursor, and window animations.
 - Use static line numbers instead of relative line numbers in [`lua/config/options.lua`](lua/config/options.lua).
 - Check for plugin updates periodically without showing update notifications.
@@ -12,3 +13,7 @@ My [LazyVim](https://github.com/LazyVim/LazyVim) configuration.
 Add LazyVim extras in [`lua/config/lazy.lua`](lua/config/lazy.lua), before the `{ import = "plugins" }` entry. Put custom plugin specs and overrides in `lua/plugins/`; those are imported afterward. The included `example.lua` is a disabled reference file, so its sample plugins and settings are not active.
 
 See the [LazyVim installation guide](https://lazyvim.github.io/installation) for setup instructions.
+
+## Homebrew tools
+
+Run `brew bundle --file=Brewfile` from this directory to install the tools listed in the [`Brewfile`](Brewfile): Neovim, ripgrep (`rg`), ShellCheck, shfmt, and markdownlint-cli2. Mason installs the language servers; [`lua/plugins/homebrew.lua`](lua/plugins/homebrew.lua) prevents it from requesting Homebrew-managed formatters and linters.
