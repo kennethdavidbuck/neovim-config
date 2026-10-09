@@ -1,6 +1,7 @@
 # Editor and search
 brew "neovim"
 brew "ripgrep"
+brew "lazygit"
 
 # Shell diagnostics and formatting
 brew "shellcheck"
